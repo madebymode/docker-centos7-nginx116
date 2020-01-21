@@ -5,7 +5,5 @@ MAINTAINER madebymode
 ENV PHP_HOST php
 ENV PHP_PORT 9000
 
-RUN mkdir -p /etc/nginx/conf.d/vhosts
-
 EXPOSE 80
 EXPOSE 443
