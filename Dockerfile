@@ -1,10 +1,12 @@
 From centos:7
 
-#Install epel-release repo
-RUN yum -y install --setopt=tsflags=nodocs epel-release &&
-yum -y install --setopt=tsflags=nodocs nginx &&
-yum clean all
-
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN rpm -Uvh https://repo.ius.io/ius-release-el7.rpm
+# Update and install latest packages and prerequisites
+RUN yum update -y \
+    && yum install -y --nogpgcheck --setopt=tsflags=nodocs \
+        nginx \
+    && yum clean all && yum history new
 
 # default values to connect to php-fpm
 ENV PHP_HOST php
