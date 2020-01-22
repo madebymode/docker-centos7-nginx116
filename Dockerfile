@@ -15,4 +15,4 @@ ENV PHP_PORT 9000
 EXPOSE 80
 EXPOSE 443
 #start nginx
-CMD [ “nginx”, “-g”, “daemon off;”]
+CMD [ "nginx", "-g", "daemon off;"]
