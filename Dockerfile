@@ -15,7 +15,7 @@ ENV PHP_PORT 9000
 EXPOSE 80
 EXPOSE 443
 
-RUN sed -e '/^http {/,/^}/{/^}/i\include \/etc\/nginx\/sites\-enabled\/\*\.conf\;' -e '}' /etc/nginx/nginx.conf
+RUN sed -e '/^http {/,/^}/{/^}/i\include \/etc\/nginx\/sites\-enabled\/\*\.conf\;' -e '}' -i /etc/nginx/nginx.conf
 
 #start nginx
 CMD [ "nginx", "-g", "daemon off;"]
