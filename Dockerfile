@@ -20,4 +20,4 @@ STOPSIGNAL SIGTERM
 RUN sed -e '/^http {/,/^}/{/^}/i\include \/etc\/nginx\/sites\-enabled\/\*\.conf\;' -e '}' -i /etc/nginx/nginx.conf
 
 #start nginx
-ENTRYPOINT [ "nginx", "-g", "daemon off;"]
+CMD [ "nginx", "-g", "daemon off;"]
