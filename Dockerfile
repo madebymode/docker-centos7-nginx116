@@ -1,4 +1,4 @@
-From centos:7
+FROM centos:7
 
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN rpm -Uvh https://repo.ius.io/ius-release-el7.rpm
